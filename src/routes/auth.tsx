@@ -100,7 +100,7 @@ function AuthPage() {
 
           <button
             type="submit" disabled={busy}
-            className="w-full rounded-md bg-primary py-2.5 text-sm font-medium text-primary-foreground disabled:opacity-60"
+            className="w-full rounded-md bg-primary py-2.5 text-sm font-medium text-primary-foreground transition-all hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 disabled:opacity-60 disabled:hover:translate-y-0"
           >
             {busy ? "Working…" : mode === "signin" ? "Sign in" : "Create account"}
           </button>
