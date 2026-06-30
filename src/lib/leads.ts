@@ -61,12 +61,13 @@ export async function listNotes(leadId: string): Promise<LeadNote[]> {
 }
 
 export async function updateLeadStatus(id: string, status: LeadStatus) {
-  const patch: Record<string, unknown> = { status };
   // Bump "last_contacted" when the admin records a touch.
-  if (status === "contacted" || status === "converted") {
-    patch.last_contacted_at = new Date().toISOString();
-  }
-  const { error } = await supabase.from("leads").update(patch).eq("id", id);
+  const last_contacted_at =
+    status === "contacted" || status === "converted" ? new Date().toISOString() : undefined;
+  const { error } = await supabase
+    .from("leads")
+    .update(last_contacted_at ? { status, last_contacted_at } : { status })
+    .eq("id", id);
   if (error) throw error;
 }
 
