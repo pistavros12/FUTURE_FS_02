@@ -51,7 +51,10 @@ function AuthPage() {
   return (
     <div className="grid min-h-screen md:grid-cols-2">
       {/* left rail — branded panel */}
-      <div className="hidden flex-col justify-between bg-primary p-10 text-primary-foreground md:flex">
+      <div className="relative hidden flex-col justify-between overflow-hidden bg-primary p-10 text-primary-foreground md:flex">
+        {/* slow drifting accent blobs */}
+        <div className="pointer-events-none absolute -top-24 -left-16 h-72 w-72 rounded-full bg-accent/30 blur-3xl animate-[pulse_6s_ease-in-out_infinite]" />
+        <div className="pointer-events-none absolute -bottom-24 -right-16 h-72 w-72 rounded-full bg-accent/20 blur-3xl animate-[pulse_8s_ease-in-out_infinite]" />
         <Link to="/" className="flex items-center gap-2">
           <div className="h-7 w-7 rounded-sm bg-accent" />
           <span className="font-display text-xl">Leadkeep</span>
