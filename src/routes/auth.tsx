@@ -70,7 +70,7 @@ function AuthPage() {
 
       {/* right — form */}
       <div className="flex items-center justify-center p-6">
-        <form onSubmit={onSubmit} className="w-full max-w-sm space-y-5">
+        <form onSubmit={onSubmit} key={mode} className="w-full max-w-sm space-y-5 animate-fade-in">
           <div>
             <h1 className="text-3xl font-semibold">
               {mode === "signin" ? "Sign in" : "Create admin account"}
