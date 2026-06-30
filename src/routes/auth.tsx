@@ -55,17 +55,17 @@ function AuthPage() {
         {/* slow drifting accent blobs */}
         <div className="pointer-events-none absolute -top-24 -left-16 h-72 w-72 rounded-full bg-accent/30 blur-3xl animate-[pulse_6s_ease-in-out_infinite]" />
         <div className="pointer-events-none absolute -bottom-24 -right-16 h-72 w-72 rounded-full bg-accent/20 blur-3xl animate-[pulse_8s_ease-in-out_infinite]" />
-        <Link to="/" className="flex items-center gap-2">
-          <div className="h-7 w-7 rounded-sm bg-accent" />
+        <Link to="/" className="relative flex items-center gap-2 animate-fade-in">
+          <div className="h-7 w-7 rounded-sm bg-accent transition-transform hover:rotate-12" />
           <span className="font-display text-xl">Leadkeep</span>
         </Link>
-        <div>
+        <div className="relative animate-fade-in [animation-delay:120ms] [animation-fill-mode:backwards]">
           <p className="font-display text-3xl leading-snug">
             "A lead lost to a forgotten follow-up is the most expensive lead you'll ever have."
           </p>
           <p className="mt-3 text-sm opacity-70">— Every sales lead, ever.</p>
         </div>
-        <p className="text-xs opacity-60">Admin panel · authorised users only</p>
+        <p className="relative text-xs opacity-60 animate-fade-in [animation-delay:240ms] [animation-fill-mode:backwards]">Admin panel · authorised users only</p>
       </div>
 
       {/* right — form */}
