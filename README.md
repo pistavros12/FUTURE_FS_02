@@ -31,11 +31,6 @@ Node.js (v18+)
 MongoDB instance (local or Atlas) — or Supabase project, depending on stack
 
 
-Installation
-
-bashgit clone https://github.com/your-username/mini-crm.git
-cd mini-crm
-npm install
 
 Environment Variables
 
@@ -50,10 +45,7 @@ Run Locally
 bash# Start backend
 npm run server
 
-# Start frontend
-npm run client
 
-App will be available at http://localhost:3000.
 
 Usage
 
